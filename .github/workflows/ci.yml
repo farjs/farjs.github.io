@@ -1,0 +1,30 @@
+# resources:
+#  https://remarkablemark.org/blog/2021/02/20/migrate-travis-ci-to-github-actions-ruby-workflow/
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    tags:
+      - '*'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Git checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.4
+        bundler-cache: true # runs `bundle install` and caches installed gems automatically
+
+    - name: Run build
+      run: ./script/cibuild.sh

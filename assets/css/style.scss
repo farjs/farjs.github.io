@@ -1,0 +1,23 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+//   background: #555;
+}
+
+.header h1 {
+  position: relative;
+//   top: 5px;
+  left: 20px;
+}
+
+.header h2 {
+  position: relative;
+//   top: 0px;
+  left: 20px;
+}

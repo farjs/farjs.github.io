@@ -1,37 +1,140 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/farjs/farjs.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Good old Windows **F**ile and **AR**chive Manager
+([FAR](https://en.wikipedia.org/wiki/Far_Manager)) app built with:
+[Scala.js](https://www.scala-js.org/),
+[React.js](https://reactjs.org/),
+[react-blessed](https://github.com/Yomguithereal/react-blessed),
+[blessed](https://github.com/chjj/blessed)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Runs on [Node.js](https://nodejs.org/), thus cross-platform:
+* `Mac OS X` (primary support in [iTerm2](https://iterm2.com/) terminal)
+* `Windows` (primary support in [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/))
+* `Linux`
 
-### Markdown
+## Install
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To install (or upgrade) it on your machine use the following command:
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+``` bash
+$ npm i -g farjs-app
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+then you can run the application from your favorite terminal:
 
-### Jekyll Themes
+``` bash
+$ farjs
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/farjs/farjs.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![Screenshots](https://raw.githubusercontent.com/scommons/far-js/main/docs/images/screenshots.png)
 
-### Support or Contact
+## Documentation
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Modules
+
+- [File Browser](#file-browser)
+- [Dev Tools](#dev-tools)
+    - [Logs](#logs)
+    - [Inputs](#inputs)
+    - [Colors](#colors)
+
+### Other
+
+- Developing
+    - See [develop.md](https://github.com/scommons/far-js/blob/main/develop.md)
+- [FAQ](#faq)
+    - [Key Bindings](#key-bindings)
+
+## File Browser
+
+Main application window that consists of two similar panels.
+Each panel displays list of files and directories. You can perform
+different operations:
+
+* **Navigation** within panels:
+    * Items **selection** - `Shift + Up/Down/Left/Right/PageUp/PageDown/Home/End`
+    * **Go back** to the parent folder - `Ctrl + PageUp`
+    * **Go into** a folder - `Ctrl + PageDown` / `Return`
+
+* **Drive** selection popup
+  (see [Key Bindings](#key-bindings) for how to re-map it to `Alt + F1/F2`)
+    * Show it on the **left** panel - `Alt + L`
+    * Show it on the **right** panel - `Alt + R`
+
+* **Open item** in default application - `Alt + O`
+  (see [Key Bindings](#key-bindings) for how to re-map it to `Shift + Return`)
+* **Copy Path** of current item into **Clipboard** - `Ctrl + C`
+  (in iTerm2 only)
+* **Swap** the panels - `Ctrl + U`
+* **Quick View** of current item on in-active panel - `Ctrl + Q`
+* Show **Quick Search** box - `Ctrl + S`
+* **Refresh** active panel - `Ctrl + R`
+* **View item(s)** - `F3`
+    * Scans selected folder(s)/file(s) and calculates size(s)
+* **Copy item(s)** - `F5`
+* **Copy current item inplace** - `Shift + F5`
+* **Rename/Move item(s)** - `F6`
+* **Rename/Move current item inplace** - `Shift + F6`
+* **Create folder** (with intermediate sub-folders) - `F7`
+* **Delete item(s)** - `F8`
+
+## Dev Tools
+
+Use `F12` to show/hide DEV tools components on the right side.
+Press `F12` again to switch between the components.
+
+### Logs
+
+Shows all the intercepted `console.log` and `console.error` messages,
+since the app itself is rendered to the console.
+
+### Inputs
+
+Shows input keys sequences.
+
+### Colors
+
+Shows possible colors with their `hex` codes for current terminal/theme.
+
+## FAQ
+
+### Key Bindings
+
+* Why supported key combination doesn't work or trigger another
+  action in my terminal?
+    - Some key combinations (especially `Alt+`) have to be manually re-mapped
+      in your terminal settings to **send** supported **escape sequences**
+      or **hex codes**.
+      For example, you can re-map:
+        - | Key | Supported Key | Escape Sequence ^[ ... | Hex Codes |
+                | --- | --- | --- | --- |
+          | `Alt + F1` | `Alt + L` | `l` |
+          | `Alt + F2` | `Alt + R` | `r` |
+          | `Shift + Return` | `Alt + O` | `o` |
+          | `CMD + PageDown` | `Ctrl + PageDown` | `[6^` |
+          | `CMD + PageUp` | `Ctrl + PageUp` | `[5^` |
+          | `CMD + R` | `Ctrl + R` | | `0x12` |
+    - In [iTerm2](https://iterm2.com/) it looks like this:
+        - ![Keys Re Mapping](https://raw.githubusercontent.com/scommons/far-js/main/docs/images/keys_re_mapping.png)
+    - In [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
+      you can use [sendInput action](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/actions#send-input)
+      (in `settings.json`):
+      ```json
+      {
+        "actions": [
+  
+            { "command": { "action": "sendInput", "input": "\u001bl" }, "keys": "alt+f1" },
+            { "command": { "action": "sendInput", "input": "\u001br" }, "keys": "alt+f2" },
+            { "command": { "action": "sendInput", "input": "\u001bo" }, "keys": "shift+enter" }
+    
+        ]
+      }
+      ```
+### Mouse Support
+
+* Why on `Windows` platform `mouse` doesn't work?
+    - Indeed, on `Windows` mouse may not work,
+      please, check [this thread/issue](https://github.com/microsoft/terminal/issues/376#issuecomment-973178777)
+      for more details.
