@@ -28,7 +28,7 @@ then you can run the application from your favorite terminal:
 $ farjs
 ```
 
-![Screenshots](https://raw.githubusercontent.com/scommons/far-js/main/docs/images/screenshots.png)
+![Screenshots](https://raw.githubusercontent.com/farjs/farjs/main/docs/images/screenshots.png)
 
 ## Documentation
 
@@ -43,7 +43,7 @@ $ farjs
 ### Other
 
 - Developing
-    - See [develop.md](https://github.com/scommons/far-js/blob/main/develop.md)
+    - See [develop.md](https://github.com/farjs/farjs/blob/main/develop.md)
 - [FAQ](#faq)
     - [Key Bindings](#key-bindings)
 
@@ -117,7 +117,7 @@ Shows possible colors with their `hex` codes for current terminal/theme.
           | `CMD + PageUp` | `Ctrl + PageUp` | `[5^` |
           | `CMD + R` | `Ctrl + R` | | `0x12` |
     - In [iTerm2](https://iterm2.com/) it looks like this:
-        - ![Keys Re Mapping](https://raw.githubusercontent.com/scommons/far-js/main/docs/images/keys_re_mapping.png)
+        - ![Keys Re Mapping](https://raw.githubusercontent.com/farjs/farjs/main/docs/images/keys_re_mapping.png)
     - In [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
       you can use [sendInput action](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/actions#send-input)
       (in `settings.json`):
