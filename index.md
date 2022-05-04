@@ -78,6 +78,7 @@ different operations:
 * **Rename/Move item(s)** - `F6`
 * **Rename/Move current item inplace** - `Shift + F6`
 * **Create folder** (with intermediate sub-folders) - `F7`
+* **Add files to archive (ZIP)** - `Shift + F7`
 * **Delete item(s)** - `F8`
 
 ## Dev Tools
@@ -132,6 +133,24 @@ Shows possible colors with their `hex` codes for current terminal/theme.
         ]
       }
       ```
+
+### Archive Support
+
+* Why on my platform I get: _Command not found (`unzip`/`zip`) error_?
+    - Indeed, on `Windows`, for example, they aren't pre-installed.
+      You can download them from [here](http://stahlworks.com/dev/index.php?tool=zipunzip),
+      for example, and then store them in local folder that
+      is listed in the `PATH` environment variable.
+
+### Network Shared Folders
+
+* How can I open network shared folders on `Mac OS X`?
+    - On `Mac OS X` you can first mount shared folder on local drive
+      by using _Connect to Server_ feature in Finder,
+      see details [here](https://superuser.com/a/375250/477240).
+      Then you should be able to select it in the **Drive** selection
+      popup in FAR.js.
+
 ### Mouse Support
 
 * Why on `Windows` platform `mouse` doesn't work?
