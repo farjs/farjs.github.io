@@ -55,6 +55,7 @@ different operations:
 
 * **Navigation** within panels:
     * Items **selection** - `Shift + Up/Down/Left/Right/PageUp/PageDown/Home/End`
+      * Select/Deselect group with `+`/`-`
     * **Go back** to the parent folder - `Ctrl + PageUp`
     * **Go into** a folder - `Ctrl + PageDown` / `Return`
 
