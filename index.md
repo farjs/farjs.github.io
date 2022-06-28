@@ -118,8 +118,14 @@ Shows possible colors with their `hex` codes for current terminal/theme.
           | `CMD + PageDown` | `Ctrl + PageDown` | `[6^` |
           | `CMD + PageUp` | `Ctrl + PageUp` | `[5^` |
           | `CMD + R` | `Ctrl + R` | | `0x12` |
-    - In [iTerm2](https://iterm2.com/) it looks like this:
+          | `CMD + F3` | `Ctrl + F3` | `[13;5~` | |
+          | `CMD + F4` | `Ctrl + F4` | `[14;5~` | |
+          | `CMD + F12` | `Ctrl + F12` | `[24;5~` | |
+    - In [iTerm2](https://iterm2.com/), when you go to
+    `Preferences -> Keys` and press `+`, it looks like this:
         - ![Keys Re Mapping](https://raw.githubusercontent.com/farjs/farjs/main/docs/images/keys_re_mapping.png)
+        - You can `Import` ALL supported keys re-mappings using
+        [FAR.js iTerm2 Preset](https://raw.githubusercontent.com/farjs/farjs.github.io/main/data/farjs.itermkeymap)
     - In [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
       you can use [sendInput action](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/actions#send-input)
       (in `settings.json`):
