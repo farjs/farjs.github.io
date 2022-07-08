@@ -81,6 +81,7 @@ different operations:
 * **Create folder** (with intermediate sub-folders) - `F7`
 * **Add files to archive (ZIP)** - `Shift + F7`
 * **Delete item(s)** - `F8`
+* **Main menu** - `F9`
 
 ## Dev Tools
 
