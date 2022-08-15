@@ -165,3 +165,13 @@ Shows possible colors with their `hex` codes for current terminal/theme.
     - Indeed, on `Windows` mouse may not work,
       please, check [this thread/issue](https://github.com/microsoft/terminal/issues/376#issuecomment-973178777)
       for more details.
+
+### Unicode Support
+
+* Why on `Linux`/`Ubuntu` I get `???` instead of
+  double border characters?
+    - You have to set `LANG=en_US.UTF-8` environment
+      variable globally, or via command line:
+      ```bash
+      LANG=en_US.UTF-8 farjs
+      ```
