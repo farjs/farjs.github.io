@@ -115,6 +115,7 @@ Shows possible colors with their `hex` codes for current terminal/theme.
           | --- |-----------------------| --- | --- |
           | `Alt + F1` | `Alt + L` | `l`                   | |
           | `Alt + F2` | `Alt + R` | `r`                   | |
+          | `Alt + F12` | `Alt + H` | `h`                   | |
           | `Shift + Return` | `Alt + O` | `o`                   | |
           | `CMD + PageDown` | `Ctrl + PageDown` | `[6^`                 | |
           | `CMD + PageUp` | `Ctrl + PageUp` | `[5^`                 | |
@@ -138,6 +139,7 @@ Shows possible colors with their `hex` codes for current terminal/theme.
   
             { "command": { "action": "sendInput", "input": "\u001bl" }, "keys": "alt+f1" },
             { "command": { "action": "sendInput", "input": "\u001br" }, "keys": "alt+f2" },
+            { "command": { "action": "sendInput", "input": "\u001bh" }, "keys": "alt+f12" },
             { "command": { "action": "sendInput", "input": "\u001bo" }, "keys": "shift+enter" }
     
         ]
