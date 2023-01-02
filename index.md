@@ -75,6 +75,7 @@ different operations:
   (see [Key Bindings](#key-bindings) for how to re-map it to `Shift + Return`)
 * **Copy Path** of current item into **Clipboard** - `Ctrl + C`
   (in iTerm2 only)
+* **Folder shortcuts** - `Ctrl + D`
 * **Folders history** - `Alt + F12`
 * **Swap** the panels - `Ctrl + U`
 * **Quick View** of current item on in-active panel - `Ctrl + Q`
