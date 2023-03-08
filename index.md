@@ -17,9 +17,9 @@ Good old Windows **F**ile and **AR**chive Manager
 [blessed](https://github.com/chjj/blessed)
 
 Runs on [Node.js](https://nodejs.org/), thus cross-platform:
-* `Mac OS X` (primary support in [iTerm2](https://iterm2.com/) terminal)
-* `Windows` (primary support in [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/))
-* `Linux`
+* `Mac OS X` (primary support in [iTerm2](https://iterm2.com/) and [WezTerm](https://wezfurlong.org/wezterm/))
+* `Windows` (primary support in [WezTerm](https://wezfurlong.org/wezterm/) and [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/))
+* `Linux` (primary support in [WezTerm](https://wezfurlong.org/wezterm/))
 
 ## Install
 
@@ -42,6 +42,7 @@ $ farjs
 ### Modules
 
 - [File Browser](#file-browser)
+- [File Viewer](#file-viewer)
 - [Dev Tools](#dev-tools)
     - [Logs](#logs)
     - [Inputs](#inputs)
@@ -82,6 +83,7 @@ different operations:
 * Show **Quick Search** box - `Ctrl + S`
 * **Refresh** active panel - `Ctrl + R`
 * **View item(s)** - `F3`
+    * Opens focused file in the internal [File Viewer](#file-viewer)
     * Scans selected folder(s)/file(s) and calculates size(s)
 * **Copy item(s)** - `F5`
 * **Copy current item inplace** - `Shift + F5`
@@ -91,6 +93,14 @@ different operations:
 * **Add files to archive (ZIP)** - `Shift + F7`
 * **Delete item(s)** - `F8`
 * **Main menu** - `F9`
+
+## File Viewer
+
+Built-in internal text file viewer.
+
+* **Wrap/Unwrap** text - `F2`
+* **Move view column** - `Left/Right`
+* **Select Encoding** - `F8`
 
 ## Dev Tools
 
