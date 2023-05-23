@@ -77,7 +77,8 @@ different operations:
 * **Copy Path** of current item into **Clipboard** - `Ctrl + C`
   (in iTerm2 only)
 * **Folder shortcuts** - `Ctrl + D`
-* **Folders history** - `Alt + F12`
+* **Folders history** - `Alt + H`
+* **File view history** - `Alt + V`
 * **Swap** the panels - `Ctrl + U`
 * **Quick View** of current item on in-active panel - `Ctrl + Q`
 * Show **Quick Search** box - `Ctrl + S`
