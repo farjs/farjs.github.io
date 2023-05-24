@@ -135,6 +135,7 @@ Shows possible colors with their `hex` codes for current terminal/theme.
           | --- |-----------------------| --- | --- |
           | `Alt + F1` | `Alt + L` | `l`                   | |
           | `Alt + F2` | `Alt + R` | `r`                   | |
+          | `Alt + F11` | `Alt + V` | `v`                   | |
           | `Alt + F12` | `Alt + H` | `h`                   | |
           | `Shift + Return` | `Alt + O` | `o`                   | |
           | `CMD + PageDown` | `Ctrl + PageDown` | `[6^`                 | |
@@ -159,6 +160,7 @@ Shows possible colors with their `hex` codes for current terminal/theme.
   
             { "command": { "action": "sendInput", "input": "\u001bl" }, "keys": "alt+f1" },
             { "command": { "action": "sendInput", "input": "\u001br" }, "keys": "alt+f2" },
+            { "command": { "action": "sendInput", "input": "\u001bv" }, "keys": "alt+f11" },
             { "command": { "action": "sendInput", "input": "\u001bh" }, "keys": "alt+f12" },
             { "command": { "action": "sendInput", "input": "\u001bo" }, "keys": "shift+enter" }
     
@@ -195,7 +197,24 @@ Shows possible colors with their `hex` codes for current terminal/theme.
 * Why on `Linux`/`Ubuntu` I get `???` instead of
   double border characters?
     - You have to set `LANG=en_US.UTF-8` environment
-      variable globally, or via command line:
+      variable globally:
+      ```bash
+      echo "export LANG=en_US.UTF-8" >> ~/.bashrc
+      ```
+      or via command line:
       ```bash
       LANG=en_US.UTF-8 farjs
+      ```
+
+### iTerm2 Support
+
+* Why in `iTerm2` I don't get 256 colors and
+_copy into clipboard_ support when I run `farjs`
+from inside a **remote terminal session**
+(`ssh`, `docker exec`, etc.)?
+    - Indeed, in case of remote terminal connection
+you have to tell `farjs` that it is actually running
+from inside iTerm2 terminal, for ex. via command line:
+      ```bash
+      TERM_PROGRAM=iTerm.app TERM=xterm-256color farjs
       ```
