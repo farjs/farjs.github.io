@@ -3,7 +3,6 @@ layout: default
 ---
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://vshymanskyy.github.io/StandWithUkraine)
-[![Русский корабль, иди на хуй!](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/RussianWarship.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
 
@@ -11,7 +10,6 @@ layout: default
 
 Good old Windows **F**ile and **AR**chive Manager
 ([FAR](https://en.wikipedia.org/wiki/Far_Manager)) app built with:
-[Scala.js](https://www.scala-js.org/),
 [React.js](https://reactjs.org/),
 [react-blessed](https://github.com/Yomguithereal/react-blessed),
 [blessed](https://github.com/chjj/blessed)
